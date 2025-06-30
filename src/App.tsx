@@ -18,7 +18,6 @@ export default function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  // Task tracker states
   const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -96,7 +95,6 @@ export default function App() {
       task.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Styles (same as before) ...
   const containerStyle = {
     maxWidth: 700,
     margin: "2rem auto",
@@ -164,7 +162,6 @@ export default function App() {
     marginTop: 4,
   };
 
-  // LOGIN PAGE
   if (!loggedIn) {
     return (
       <div style={containerStyle}>
@@ -192,7 +189,6 @@ export default function App() {
     );
   }
 
-  // TASK TRACKER PAGE
   return (
     <div style={containerStyle}>
       <div
